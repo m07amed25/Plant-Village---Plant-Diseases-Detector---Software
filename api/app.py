@@ -5,6 +5,7 @@ import numpy as np
 from io import BytesIO
 from PIL import Image
 import tensorflow as tf
+import os
 
 app = FastAPI()
 
@@ -20,7 +21,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-MODEL = tf.keras.models.load_model("../models/plant_village_model_v1.h5")
+
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "../models/plant_village_model_v1.h5")
+MODEL = tf.keras.models.load_model(MODEL_PATH)
+
 
 CLASS_NAMES = ["Early Blight", "Late Blight", "Healthy"]
 
