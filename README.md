@@ -28,7 +28,7 @@ cd Plant-Village---Plant-Diseases-Detector---Software
 ### 2️⃣ Model Training (Optional)
 If you wish to retrain the model:
 ```bash
-python train.py
+python training/potato-disease-classification-model.ipynb
 ```
 
 ## 📊 Model Performance

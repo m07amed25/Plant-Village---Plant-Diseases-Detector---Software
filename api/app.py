@@ -22,7 +22,7 @@ app.add_middleware(
 )
 
 
-MODEL_PATH = os.path.join(os.path.dirname(__file__), "../models/plant_village_model_v1.h5")
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "../models/plant_village_model_v2.h5")
 MODEL = tf.keras.models.load_model(MODEL_PATH)
 
 
